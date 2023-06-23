@@ -128,7 +128,7 @@ export default {
 
       console.log(this.persona.rol)
 
-      axios.post('http://localhost:4000/login', this.persona)
+      axios.post('https://sintapujos2023-rm77.onrender.com/login', this.persona)
         .then((response) => {
           if (response.data.code === 201) {
             this.actualizarRol(this.persona.rol)

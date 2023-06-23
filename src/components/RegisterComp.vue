@@ -156,7 +156,7 @@ export default {
   methods: {
     postRegister() {
       console.log(this.persona)
-      axios.post('http://localhost:4000/persona', this.persona)
+      axios.post('https://sintapujos2023-rm77.onrender.com/persona', this.persona)
         .then((response) =>{
           if (response.data.code === 204) {
             Cookies.set('token', response.data.token)

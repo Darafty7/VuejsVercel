@@ -56,7 +56,7 @@ export default {
                 formData.append('imagen', file);
 
                 try {
-                    const response = await fetch('http://localhost:4000/imagen', {
+                    const response = await fetch('https://sintapujos2023-rm77.onrender.com/imagen', {
                         method: 'POST',
                         body: formData
                     });
@@ -77,7 +77,7 @@ export default {
         },
         async obtenerImagenes() {
             try {
-                const response = await fetch('http://localhost:4000/imagenes');
+                const response = await fetch('https://sintapujos2023-rm77.onrender.com/imagenes');
                 if (response.ok) {
                     const data = await response.json();
                     this.imagenes = data;
@@ -95,7 +95,7 @@ export default {
         },
         async eliminarImagen(idEvento) {
 
-            await axios.delete('http://localhost:4000/evento/' + idEvento)
+            await axios.delete('https://sintapujos2023-rm77.onrender.com/evento/' + idEvento)
                 .then((response) => {
                     console.log(response);
                     this.$swal.fire({

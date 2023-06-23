@@ -14,7 +14,6 @@
                 <p>Aquí va el comentario del aprendiz</p>
                 <div class="d-flex justify-content-between">
                   <div class="d-flex flex-row align-items-center">
-                    <p class="small mb-0 ms-2">Luisa</p>
                   </div>
                   <div class="d-flex flex-row align-items-center">
                     <i class="far fa-thumbs-up mx-2 fa-xs text-black" style="margin-top: -0.16rem;"></i>
@@ -58,7 +57,7 @@ export default {
       }
     },
     getuser() {
-      axios.get("http://localhost:4000/api/comentario")
+      axios.get("https://sintapujos2023-rm77.onrender.com/comentario")
         .then(response => {
           this.comentarios = response.data;
         })
@@ -79,7 +78,7 @@ export default {
         // Asigna el número de documento a newcomen.n_documento antes de enviarlo al servidor
         this.newcomen.n_documento = this.numeroDocumento;
 
-        axios.post("http://localhost:4000/api/comentario", this.newcomen)
+        axios.post("https://sintapujos2023-rm77.onrender.com/comentario", this.newcomen)
           .then(response => {
             console.log(response.data);
             Swal.fire({
