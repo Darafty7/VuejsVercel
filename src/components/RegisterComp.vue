@@ -66,7 +66,7 @@
           </div>
           <div class="form-floating">
             <input type="password" class="form-control rounded-4 mb-1" id="contraseña"  placeholder="Contraseña"
-              v-model="persona.contraseña" required>
+              v-model="persona.contrasena" required>
             <label for="password" class="color-form">Contraseña</label>
           </div>
           <div class="form-floating ">
@@ -141,9 +141,9 @@ export default {
         // email:''} "nombre":"holaassasa",
         nombre:'',
         apellido: "",
-        contraseña: "",
+        contrasena: "",
         tipo_documento: "",
-        n_documento: '',
+        n_documento: "",
         n_ficha: '',
         telefono: '',
         email: "",
